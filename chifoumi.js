@@ -33,7 +33,7 @@ imgleft.addEventListener('click', () => {
 let choixgauche = ChoixOrdinateur();
 imgleft.style.backgroundImage = `url(images-pfc/${choixgauche}.jpg)`;
 tableauResultat[0]= choixgauche;
-deterwinner()
+deterwinner();
 });
 
 
@@ -43,7 +43,7 @@ imgright.addEventListener('click', () => {
     let choixdroit = ChoixOrdinateur();
     imgright.style.backgroundImage = `url(images-pfc/${choixdroit}.jpg)`;
     tableauResultat[1]= choixdroit;
-    deterwinner()
+    deterwinner();
     });
 
 
@@ -60,8 +60,41 @@ if (tableauResultat[0] == tableauResultat[1]) {
 console.log("Egalité!");
 
 
-} 
+} else if (tableauResultat[0] === 'pierre' && tableauResultat[1] === 'ciseau'||
+    tableauResultat[0] === 'ciseau' && tableauResultat[1] === 'feuille'||
+    tableauResultat[0] === 'feuille' && tableauResultat[1] === 'pierre')
+{
+
+
+console.log("Joueur 1 à gagné");
+
+}  else {
+
+
+console.log("Joueur 2 à gagné");
+
+
+}
+
 };
+
+
+let rejouer = document.getElementById('boutonRejouer').addEventListener('click', depart);
+
+function depart () {
+
+
+imgleft.style.backgroundImage = 'url(images-pfc/depart.jpg)';
+imgright.style.backgroundImage = 'url(images-pfc/depart.jpg)';
+
+console.clear();
+
+
+};
+
+
+
+
 
 
 

@@ -1,19 +1,111 @@
 
-const tableauResultat = ["rien","rien"];
+const Jeu = document.querySelector("#jeu");
+const Btn = document.querySelector("#boutonRejouer");
 
-
-let left = document.getElementById('gauche');
-let right = document.getElementById('droite');
-
-let imgleft = document.getElementById('image-gauche');
-let imgright = document.getElementById('image-droite');
-
-
-let resleft = document.getElementById('resultat-gauche');
-let resright = document.getElementById('resultat-droite');
+const Chjeu1 = new Chifoumi();
+const Chjeu2 = new Chifoumi();
 
 
 
+Jeu.appendChild(Chjeu1.getHtml());
+Jeu.appendChild(Chjeu2.getHtml());
+
+
+
+function deterwinner() {
+    Chifoumi.Resultat(Chjeu1, Chjeu2);
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
 console.log(ChoixOrdinateur());
 
 
@@ -117,7 +209,7 @@ function deterwinner() {
 
 };
 
-
+*/
 
 
 
